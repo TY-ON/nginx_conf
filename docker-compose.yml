@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nginx:
+    build: .
+    ports: 
+      - "80:80"
+    networks:
+      - cipher
+networks:
+  cipher:
+    name: cipher_proxy
