@@ -6,7 +6,11 @@ services:
     ports: 
       - "80:80"
     networks:
-      - cipher
+      cipher:
+        ipv4_address: 172.30.0.2
 networks:
   cipher:
     name: cipher_proxy
+    ipam:
+      config:
+        - subnet: "172.30.0.0/24"
